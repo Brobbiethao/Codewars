@@ -1,0 +1,17 @@
+function DNAStrand(dna) {
+  //your code here
+  dna = dna.split("")
+  let comp = []
+  for(var i = 0; i < dna.length; i++) {
+    if(dna[i] === "A") {
+    comp.push("T")
+    } else if(dna[i] === "T") {
+    comp.push("A")
+    } else if(dna[i] === "G") {
+    comp.push("C")
+    } else if(dna[i] === "C") {
+    comp.push("G")
+    }
+  }
+  return comp.join("")
+}

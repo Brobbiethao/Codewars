@@ -1,0 +1,10 @@
+function squareDigits(num){
+  //may the code be with you
+  num = String(num).split("")
+  var arr = []
+  for(var i = 0; i < num.length; i++) {
+    num[i] = parseInt(num[i])
+    arr.push( (num[i] * num[i]) )
+  }
+  return parseInt(arr.join(""))
+}
