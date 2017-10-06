@@ -1,0 +1,16 @@
+function disemvowel(str) {
+  str = str.split(" ").join(" ")
+  var arr = []
+  for(var i = 0; i < str.length; i++) {
+    if( (str[i] === 'a') || (str[i] === 'e') || (str[i] === 'i') || (str[i] === 'o') || (str[i] === 'u') ) {
+    arr.push("");
+    } else if( (str[i] === 'A') || (str[i] === 'E') || (str[i] === 'I') || (str[i] === 'O') || (str[i] === 'U') ) {
+    arr.push("");
+    } else {
+    arr.push(str[i])
+    }
+  }
+  
+  
+  return arr.join("");
+}

@@ -1,0 +1,26 @@
+function Node() {
+  this.next = null;
+  this.getNext = function () {
+    return this.next;
+  };
+  this.setNext = function (node) {
+    this.next = node;
+  };
+}
+
+function loop_size(node) {
+  var old = node,
+    newer = node.getNext(),
+    size = 0;
+  while (old !== newer) {
+    old = old.getNext();
+    newer = newer.getNext().getNext();
+  }
+  size++;
+  old = old.getNext();
+  while (old !== newer) {
+    size++;
+    old = old.getNext();
+  }
+  return size;
+}

@@ -1,0 +1,13 @@
+function getMiddle(s) {
+  var str = String(s).split("")
+  var length = str.length;
+  let mid = Math.floor(length/2)
+  console.log(mid)
+
+  if(length % 2 === 0) {
+  return str[(mid-1)] + str[length/2]
+  } else {
+  return str[mid]
+  }
+
+};

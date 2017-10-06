@@ -1,0 +1,10 @@
+function pigIt(str){
+  //Code here
+  str = str.split(" ")
+  var arr = []
+  for(var i = 0; i < str.length; i++ ) {
+   arr.push(str[i].charAt(1) + str[i].slice(2) + str[i][0] + "ay" )
+  }
+  console.log(arr)
+  return arr.join(" ")
+}

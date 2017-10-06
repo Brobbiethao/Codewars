@@ -1,0 +1,11 @@
+function highAndLow(numbers) {
+  // ...
+  var num = numbers.split(" ")
+  var max = num.reduce(function(a, b) {
+    return Math.max(a, b);
+  })
+  var low = num.reduce(function(a, b) {
+    return Math.min(a, b);
+  })
+  return (max+' '+low)
+};

@@ -1,0 +1,18 @@
+function spinWords(str) {
+  //TODO Have fun :)
+  var arr = [];
+  str = str.split(" ")
+  for(var i = 0; i < str.length; i++) {
+    if(str[i].length < 5) {
+    arr.push(str[i])
+    } else {
+    var temp = str[i];
+    var reverse = [];
+    for(var j = temp.length; j >= 0; j--) {
+    reverse.push(temp[j])
+    }
+    arr.push(reverse.join(""))
+    }
+  }
+  return arr.join(" ")
+}

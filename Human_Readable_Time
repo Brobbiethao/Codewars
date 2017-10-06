@@ -1,0 +1,22 @@
+function humanReadable(seconds) {
+  // TODO
+  let HH = Math.floor(seconds/3600)
+  let MM = Math.floor((seconds - HH * 3600) / 60 )
+  let SS = Math.floor(seconds - HH * 3600 - MM * 60 )
+  if(HH < 10) {
+    HH = 0 + String(HH);
+  } else if (HH === 0) {
+    HH = 00
+  }
+  if(MM < 10) {
+    MM =  0 + String(MM);
+  } else if (MM === 0) {
+    MM = 00
+  }
+  if(SS < 10) {
+    SS = 0 + String(SS);
+  } else if (SS === 0) {
+    SS = 00
+  }
+  return (HH)+":"+(MM)+":"+(SS)
+}

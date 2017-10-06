@@ -1,0 +1,11 @@
+for (var name in this) {
+  if (typeof this[name] === 'number') {
+    Bomb.CutTheWire(this[name]);
+  }
+}
+
+Refactored
+
+var cut = Object.keys(global).filter(i => (typeof global[i] === 'number'))[0];
+
+Bomb.CutTheWire(global[cut]);
