@@ -1,0 +1,29 @@
+function digital_root(n) {
+  let stringify = n.toString().split('');
+  let total = 0;
+  // returns n if less than 10
+  if(n < 10) {
+    return n;
+  } 
+  // returns root of total if more than 9
+  if(n > 9) {
+    for(var i = 0; i < stringify.length; i++) {
+      let num = parseInt(stringify[i]);
+      total+=num;
+    }
+  }
+  // returns total if less than 10
+  if(total < 10) {
+    return total
+  } 
+  // returns sum of root of temptotal is more than 10
+  if (total > 9) {
+    let totalStringify = total.toString().split('')
+    let temptotal = 0;
+    for(var j = 0; j < totalStringify.length; j++) {
+      let num = parseInt(totalStringify[j]);
+      temptotal+=num;
+    } 
+  return temptotal;
+  }
+}
