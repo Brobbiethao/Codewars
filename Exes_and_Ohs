@@ -1,0 +1,14 @@
+function XO(str) {
+    const temp = str.toUpperCase().split('')
+    console.log(temp)
+    var countx = 0;
+    var counto = 0;
+    for(var i = 0; i < temp.length; i ++) {
+      if(temp[i] === 'X') {
+        countx++;
+      } else if(temp[i] === 'O') {
+        counto++;
+      }
+    }
+    return (countx - counto === 0) ? true : false;
+}
