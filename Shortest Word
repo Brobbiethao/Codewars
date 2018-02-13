@@ -1,0 +1,11 @@
+function findShort(s){
+  var arrSplit = s.split(' ').map(s => s.length)
+  console.log(arrSplit)
+  var lowest = arrSplit[0];
+  for(var i = 0; i < arrSplit.length; i++) {
+    if(arrSplit[i] <= lowest ) {
+      lowest = arrSplit[i]
+    }
+  }
+  return lowest;
+}
