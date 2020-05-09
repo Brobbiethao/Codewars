@@ -1,0 +1,18 @@
+function iqTest(numbers) {
+  // ...
+  let newArr = numbers.split(' ');
+  let evenArr = [];
+  let oddArr = [];
+    for(let i = 0; i < newArr.length; i++) {
+      if(newArr[i] % 2 == 0) {
+        evenArr.push(newArr[i])
+      } else {
+        oddArr.push(newArr[i])
+      };
+    }
+  if(evenArr.length < oddArr.length) {
+    return(newArr.indexOf(evenArr[0])+1)  
+  } else if(evenArr.length > oddArr.length) {
+    return(newArr.indexOf(oddArr[0])+1)
+  }
+}
